@@ -1,0 +1,6 @@
+.home_image {
+  height: 50vh;
+  z-index: -1;
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgb(4, 4, 58), rgba(0, 0, 0, 0));
+}
