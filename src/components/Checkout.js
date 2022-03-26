@@ -18,6 +18,19 @@ export const Checkout = () => {
         <div>
           <h2 className="checkout_title">Your Shopping Basket</h2>
           {/* basket Item */}
+
+          {basket.map((basketItem) => (
+            <div className="basket">
+              <div className="basket_image">
+                <img src={basketItem.image} alt="" srcset="" />
+              </div>
+              <div className="basket_infor">
+                <h3>{basketItem.title}</h3>
+                <p>{basketItem.price}</p>
+                <p>{basketItem.rating}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

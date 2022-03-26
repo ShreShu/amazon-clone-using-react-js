@@ -47,3 +47,26 @@
   color: black;
   border: 1px solid;
 }
+
+.basket {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.basket_image {
+  height: 100px;
+  width: 100px;
+}
+
+.basket_image > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.basket_infor {
+  margin-left: 10px;
+  height: 150px;
+  width: 500px;
+}
