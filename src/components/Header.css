@@ -10,7 +10,7 @@
   align-items: center;
   height: 60px;
   background-color: black;
-  position: sticky;
+  /* position: sticky; */
   top: 0%;
   color: white;
   overflow-y: visible;
