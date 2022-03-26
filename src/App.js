@@ -1,4 +1,6 @@
+import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
+import { Checkout } from "./components/Checkout";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 
@@ -7,9 +9,10 @@ function App() {
     <div className="app">
       {/* header */}
       <Header />
-      {/* home  */}
-
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="checkout" element={<Checkout />} />
+      </Routes>
     </div>
   );
 }
