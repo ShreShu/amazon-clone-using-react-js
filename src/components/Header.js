@@ -22,10 +22,12 @@ export const Header = () => {
         <SearchIcon className="header_searchIcon" />
       </div>
       <div className="header_nav">
-        <div className="header_option">
-          <span className="optionLineOne">Hello Shubham</span>
-          <span className="optionLineTwo">Sign In</span>
-        </div>
+        <Link to="/login">
+          <div className="header_option">
+            <span className="optionLineOne">Hello Shubham</span>
+            <span className="optionLineTwo">Sign In</span>
+          </div>
+        </Link>
         <div className="header_option">
           <span className="optionLineOne">Returns</span>
           <span className="optionLineTwo">Orders</span>
