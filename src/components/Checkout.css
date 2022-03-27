@@ -70,3 +70,14 @@
   height: 150px;
   width: 500px;
 }
+
+.basket_infor > button {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 45%;
+  height: 30px;
+  border-color: #a88734 #9c7e31 #846a29;
+  margin-top: 1px;
+  color: black;
+  border: 1px solid;
+}

@@ -1,16 +1,18 @@
 import "./Subtotal.css";
 import React from "react";
 import CurrencyFormat from "react-currency-format";
-
+import { useDataLayerValue } from "../Context/DataLayer";
+import { getBasketTotal } from "../Context/reducer";
 export const Subtotal = () => {
+  const [{ basket }, dispatch] = useDataLayerValue();
   return (
     <div className="subtotal">
       <CurrencyFormat
         renderText={(value) => (
           <>
             <p>
-              Subtotal (0 items):
-              <strong>0</strong>
+              Subtotal ({basket.length} items):
+              <strong>{value}</strong>
             </p>
             <small className="subtotal_gift">
               <input type="checkbox" />
@@ -19,7 +21,7 @@ export const Subtotal = () => {
           </>
         )}
         decimalScale={2}
-        value={0}
+        value={getBasketTotal(basket)}
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}

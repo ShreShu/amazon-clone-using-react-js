@@ -3,9 +3,19 @@ import "./Checkout.css";
 import React from "react";
 import { Subtotal } from "./Subtotal";
 import { useDataLayerValue } from "../Context/DataLayer";
+import matchers from "@testing-library/jest-dom/matchers";
 
 export const Checkout = () => {
   const [{ basket }, dispatch] = useDataLayerValue();
+
+  const removeFromCart = (basketId) => {
+    console.log(basketId);
+    dispatch({
+      type: "REMOVE_FROM_CART",
+      id: basketId,
+    });
+  };
+
   return (
     <div className="checkout">
       <div className="checkout_left">
@@ -18,9 +28,8 @@ export const Checkout = () => {
         <div>
           <h2 className="checkout_title">Your Shopping Basket</h2>
           {/* basket Item */}
-
           {basket.map((basketItem) => (
-            <div className="basket">
+            <div className="basket" key={Math.random()}>
               <div className="basket_image">
                 <img src={basketItem.image} alt="" srcset="" />
               </div>
@@ -28,6 +37,9 @@ export const Checkout = () => {
                 <h3>{basketItem.title}</h3>
                 <p>{basketItem.price}</p>
                 <p>{basketItem.rating}</p>
+                <button onClick={() => removeFromCart(basketItem.id)}>
+                  Remove from cart
+                </button>
               </div>
             </div>
           ))}

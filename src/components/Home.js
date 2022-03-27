@@ -16,12 +16,14 @@ export const Home = () => {
       </div>
       <div className="home_row">
         <Product
+          id="1"
           title="The lean startup"
           image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
           price="2.99"
           rating="4/5"
         />
         <Product
+          id="1"
           title="The lean startup"
           image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
           price="2.99"
@@ -30,18 +32,21 @@ export const Home = () => {
       </div>
       <div className="home_row">
         <Product
+          id="2"
           title="Alexa"
           image="https://topreveal.com/wp-content/uploads/2017/05/Best-Amazon-Alexa-Devices-Featured.jpg"
           price="2.99"
           rating="4/5"
         />
         <Product
+          id="3"
           title="Siri"
           image="http://cdn.theunlockr.com/wp-content/uploads/2011/11/Siri.jpg"
           price="2.99"
           rating="4/5"
         />
         <Product
+          id="4"
           title="Narzo 20 pro"
           image="https://images.fonearena.com/blog/wp-content/uploads/2020/09/realme-Narzo-20A.jpg"
           price="2.99"
@@ -50,6 +55,7 @@ export const Home = () => {
       </div>
       <div className="home_row">
         <Product
+          id="1"
           title="The lean startup"
           image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
           price="2.99"
