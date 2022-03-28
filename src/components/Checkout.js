@@ -4,9 +4,10 @@ import React from "react";
 import { Subtotal } from "./Subtotal";
 import { useDataLayerValue } from "../Context/DataLayer";
 import matchers from "@testing-library/jest-dom/matchers";
+import { useNavigate } from "react-router-dom";
 
 export const Checkout = () => {
-  const [{ basket }, dispatch] = useDataLayerValue();
+  const [{ basket, user }, dispatch] = useDataLayerValue();
 
   const removeFromCart = (basketId) => {
     console.log(basketId);
@@ -26,6 +27,9 @@ export const Checkout = () => {
           className="checkout_ad"
         />
         <div>
+          <h2 className="checkout_title">
+            Hello {user ? user.email : "Guest"}
+          </h2>
           <h2 className="checkout_title">Your Shopping Basket</h2>
           {/* basket Item */}
           {basket.map((basketItem) => (

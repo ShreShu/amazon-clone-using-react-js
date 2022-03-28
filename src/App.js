@@ -5,6 +5,7 @@ import { Checkout } from "./components/Checkout";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
+import { Payment } from "./components/Payment";
 import { useDataLayerValue } from "./Context/DataLayer";
 import { auth } from "./firebase/firebase";
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/" element={<Home />}></Route>
         <Route path="checkout" element={<Checkout />} />
+        <Route path="payment" element={<Payment />} />
       </Routes>
     </div>
   );

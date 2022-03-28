@@ -3,8 +3,10 @@ import React from "react";
 import CurrencyFormat from "react-currency-format";
 import { useDataLayerValue } from "../Context/DataLayer";
 import { getBasketTotal } from "../Context/reducer";
+import { useNavigate } from "react-router-dom";
 export const Subtotal = () => {
   const [{ basket }, dispatch] = useDataLayerValue();
+  const navigate = useNavigate();
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -26,7 +28,7 @@ export const Subtotal = () => {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button>proceed to checkout</button>
+      <button onClick={() => navigate("/payment")}>proceed to checkout</button>
     </div>
   );
 };
