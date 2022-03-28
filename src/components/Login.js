@@ -1,8 +1,15 @@
 import "./Login.css";
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -14,11 +21,25 @@ export const Login = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(input);
+    signInWithEmailAndPassword(auth, input.email, input.password)
+      .then((auth) => {
+        navigate("/");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   const register = (e) => {
     e.preventDefault();
+    createUserWithEmailAndPassword(auth, input.email, input.password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          navigate("/");
+        }
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (
