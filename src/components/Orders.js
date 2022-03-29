@@ -9,7 +9,7 @@ export const Orders = () => {
 
   const getSubCollections = async (email) => {
     const subcollections = await getDocs(
-      collection(db, "users", email, "12501184723")
+      collection(db, "users", email, "19396990643")
     );
     subcollections.forEach((doc) => {
       console.log(doc.data());
